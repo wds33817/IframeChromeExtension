@@ -1,0 +1,22 @@
+{
+    "name": "Embed external site",
+    "version": "1",
+    "manifest_version": 3,
+    "default_locale": "en",
+    "content_scripts": [{
+        "js": ["contentscript.js"],
+        "matches": ["*://*/*"],
+        "all_frames": true
+    }],
+    "web_accessible_resources": [
+        {
+            "resources":[
+                "frame.html"
+            ],
+            "matches":[
+                "http://*/*",
+                "https://*/*"
+            ]
+        }
+    ]
+}
